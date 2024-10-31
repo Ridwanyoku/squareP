@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddpms3yf0ehld"]
+
+[ext_resource type="Texture2D" uid="uid://cnt5kup1y8pos" path="res://Action RPG Resources (1)/Action RPG Resources/Enemies/Bat.png" id="1_0cc88"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skhdi"]
+atlas = ExtResource("1_0cc88")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c480m"]
+atlas = ExtResource("1_0cc88")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lob1j"]
+atlas = ExtResource("1_0cc88")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5spo"]
+atlas = ExtResource("1_0cc88")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65v70"]
+atlas = ExtResource("1_0cc88")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4v8di"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skhdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c480m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lob1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5spo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65v70")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="bat" type="AnimatedSprite2D"]
+position = Vector2(51, 74)
+scale = Vector2(5.875, 5.875)
+sprite_frames = SubResource("SpriteFrames_4v8di")
+autoplay = "default"
+frame_progress = 0.912147

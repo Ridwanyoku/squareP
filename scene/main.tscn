@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqg0rxr5wrt3j"]
+
+[ext_resource type="PackedScene" uid="uid://bhhijtnomwsuo" path="res://scene/tree.tscn" id="2_1faer"]
+[ext_resource type="PackedScene" uid="uid://ddpms3yf0ehld" path="res://scene/bat.tscn" id="3_bsgwj"]
+[ext_resource type="PackedScene" uid="uid://ckw1kgu73xiva" path="res://scene/fox.tscn" id="4_7xinw"]
+
+[node name="main" type="Node2D"]
+
+[node name="tree" type="Node" parent="."]
+
+[node name="tree3" parent="tree" instance=ExtResource("2_1faer")]
+position = Vector2(794, 173)
+
+[node name="tree4" parent="tree" instance=ExtResource("2_1faer")]
+position = Vector2(501, 173)
+
+[node name="tree5" parent="tree" instance=ExtResource("2_1faer")]
+position = Vector2(310, 462)
+
+[node name="tree6" parent="tree" instance=ExtResource("2_1faer")]
+position = Vector2(982, 470)
+
+[node name="tree2" parent="tree" instance=ExtResource("2_1faer")]
+position = Vector2(754, 399)
+
+[node name="tree" parent="tree" instance=ExtResource("2_1faer")]
+position = Vector2(150, 75)
+
+[node name="bat" parent="." instance=ExtResource("3_bsgwj")]
+
+[node name="fox" parent="." instance=ExtResource("4_7xinw")]
+position = Vector2(297, 340)
