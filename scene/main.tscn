@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bhhijtnomwsuo" path="res://scene/tree.tscn" id="2_1faer"]
 [ext_resource type="PackedScene" uid="uid://ddpms3yf0ehld" path="res://scene/bat.tscn" id="3_bsgwj"]
-[ext_resource type="PackedScene" uid="uid://ckw1kgu73xiva" path="res://scene/fox.tscn" id="4_7xinw"]
+[ext_resource type="PackedScene" uid="uid://bjja0t4ctugwa" path="res://scene/knight.tscn" id="3_nmhjm"]
 
 [node name="main" type="Node2D"]
 
@@ -28,5 +28,5 @@ position = Vector2(150, 75)
 
 [node name="bat" parent="." instance=ExtResource("3_bsgwj")]
 
-[node name="fox" parent="." instance=ExtResource("4_7xinw")]
-position = Vector2(297, 340)
+[node name="knight" parent="." instance=ExtResource("3_nmhjm")]
+position = Vector2(576, 323)

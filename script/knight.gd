@@ -11,10 +11,19 @@ func movement():
 	var mov = Vector2(x_mov,y_mov)
 	velocity = mov.normalized()*movement_speed
 	move_and_slide()
-	
+	if(x_mov<0):
+		animated_sprite_2d.play("run_left")
+	elif(x_mov>0):
+		animated_sprite_2d.play("run_right")
+	elif(y_mov<0):
+		animated_sprite_2d.play("run_up")
+	elif(y_mov>0):
+		animated_sprite_2d.play("run_down")
+	else:
+		animated_sprite_2d.play("idle")
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-
 func _physics_process(delta):
 	movement()
+

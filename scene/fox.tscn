@@ -1,7 +1,15 @@
-[gd_scene load_steps=29 format=3 uid="uid://ckw1kgu73xiva"]
+[gd_scene load_steps=31 format=3 uid="uid://ckw1kgu73xiva"]
 
+[ext_resource type="Script" path="res://script/char.gd" id="1_72omw"]
 [ext_resource type="Texture2D" uid="uid://71x88omeftlj" path="res://Action RPG Resources (1)/Action RPG Resources/Player/Player.png" id="1_u5pw8"]
-[ext_resource type="Script" path="res://script/CharacterBody2D.gd" id="1_vy5xa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp8w2"]
+atlas = ExtResource("1_u5pw8")
+region = Rect2(1152, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6w4t"]
+atlas = ExtResource("1_u5pw8")
+region = Rect2(1344, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muegt"]
 atlas = ExtResource("1_u5pw8")
@@ -103,6 +111,17 @@ region = Rect2(704, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wp8w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6w4t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_muegt")
 }, {
 "duration": 1.0,
@@ -200,17 +219,17 @@ radius = 19.0263
 [node name="fox" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_vy5xa")
+script = ExtResource("1_72omw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -12)
 scale = Vector2(1.89063, 1.89063)
 sprite_frames = SubResource("SpriteFrames_ykqe7")
-animation = &"run_down"
-frame_progress = 0.504448
+animation = &"idle"
+frame_progress = 0.520348
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CircleShape2D_5sant")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 process_callback = 0
